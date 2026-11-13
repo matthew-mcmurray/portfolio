@@ -57,7 +57,8 @@ export function AboutContact() {
           <Reveal>
             <p className={styles.contactEyebrow}>Contact</p>
             <h2 className={styles.contactHeading}>
-              Let&apos;s build something <em>meaningful</em>.
+              <span className={styles.headingLine}>Let&apos;s build something</span>{" "}
+              <em>meaningful</em>.
             </h2>
           </Reveal>
           <Reveal delay={100} className={styles.contactRow}>

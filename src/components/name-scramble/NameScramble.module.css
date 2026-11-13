@@ -4,12 +4,13 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  column-gap: 0.22em;
-  font-size: clamp(3.1rem, 8.6vw, 9.25rem);
+  column-gap: 0.4em;                          /* was 0.22em */
+  font-size: clamp(3.1rem, 7.4vw, 7.75rem);    /* was 8.6vw / 9.25rem */
   line-height: 0.95;
   letter-spacing: -0.01em;
   color: var(--name-ink);
   font-kerning: none;
+  
 }
 
 .word {

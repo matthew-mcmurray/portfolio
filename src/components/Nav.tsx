@@ -21,11 +21,13 @@ export function Nav({ home = true }: { home?: boolean }) {
 
     const update = () => {
       const y = window.scrollY;
-      const threshold = window.innerHeight * 0.6;
-      setScrolled(y > threshold);
+      const pastTop = y > 48; // basically "has the user started scrolling?"
+      setScrolled(pastTop);
+
       const delta = y - lastY;
-      if (Math.abs(delta) > 6) {
-        setHidden(delta > 0 && y > threshold);
+      if (Math.abs(delta) > 8) {
+        // Scrolling down hides it; scrolling up brings the pill back.
+        setHidden(delta > 0 && pastTop);
         lastY = y;
       }
       ticking = false;

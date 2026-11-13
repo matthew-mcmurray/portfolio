@@ -111,6 +111,29 @@
   background-size: 100% 1px;
 }
 
+.emailGroup {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+}
+
+.copy {
+  display: grid;
+  place-items: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  transition: background-color 0.2s, color 0.2s, transform 0.3s var(--ease-out);
+}
+.copy:hover {
+  background: var(--paper);
+  color: var(--ink);
+}
+.copy:active {
+  transform: scale(0.92);
+}
+
 .socials {
   display: flex;
   gap: 1.5rem;

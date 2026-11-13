@@ -1,6 +1,5 @@
 import type { Metadata, Viewport } from "next";
 
-// Self-hosted fonts (no external requests). Only the Latin subset downloads.
 import "@fontsource-variable/inter";
 import "@fontsource-variable/anybody/standard.css"; // weight + width axes
 import "@fontsource-variable/bricolage-grotesque";
@@ -27,7 +26,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning data-scroll-behavior="smooth">
       <head>
         {/* Marks JS as available before paint, so reveal styles never hide content without JS. */}
         <script

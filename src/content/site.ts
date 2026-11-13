@@ -82,7 +82,7 @@ export const site = {
   socials: [
     { label: "LinkedIn", href: "https://linkedin.com/in/matthew-mcmurray-108517263" },
   ],
-  sourceUrl: "https://github.com/your-handle/portfolio", // TODO: this repo
+  sourceUrl: "https://github.com/matthew-mcmurray/portfolio.git",
 };
 
 export const chapters: Chapter[] = [
@@ -148,7 +148,7 @@ export const chapters: Chapter[] = [
         {
           heading: "The problem",
           body: [
-            "Teams needed to test credit decisioning logic, but the existing tool was so hard to learn that new users gave up and handed their work over to experienced colleagues. That slowed everyone down the business and frustrated the people the tool was meant to serve.",
+            "Teams needed to test credit decisioning logic, but the existing tool was so hard to learn that new users gave up and handed their work over to experienced colleagues. That slowed down the business and frustrated the people the tool was meant to serve",
             "",
             "The main pain points:",
           ],

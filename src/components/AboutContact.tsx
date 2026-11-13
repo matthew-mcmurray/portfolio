@@ -1,5 +1,6 @@
 import { about, site } from "@/content/site";
 import { Reveal } from "./Reveal";
+import { CopyEmail } from "./CopyEmail";
 import Image from "next/image";
 import styles from "./AboutContact.module.css";
 
@@ -10,7 +11,7 @@ export function AboutContact() {
     <section className={`panel ${styles.panel}`} aria-label="About and contact">
       <div id="about" className={`container ${styles.about}`}>
         <Reveal>
-          <h2 className={styles.heading}>About</h2>
+          <h2 className={styles.heading}>About Me</h2>
           <div className={styles.photo}>
             <Image
               src={about.photo.src}
@@ -60,10 +61,13 @@ export function AboutContact() {
             </h2>
           </Reveal>
           <Reveal delay={100} className={styles.contactRow}>
-            <a href={`mailto:${site.email}`} className={styles.email}>
-              {site.email}
-              <span aria-hidden="true">↗</span>
-            </a>
+            <div className={styles.emailGroup}>
+              <a href={`mailto:${site.email}`} className={styles.email}>
+                {site.email}
+                <span aria-hidden="true">↗</span>
+              </a>
+              <CopyEmail email={site.email} className={styles.copy} />
+            </div>
             <ul className={styles.socials}>
               {site.socials.map((s) => (
                 <li key={s.label}>

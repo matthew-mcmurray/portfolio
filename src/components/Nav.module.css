@@ -1,0 +1,118 @@
+.nav {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 50;
+  display: flex;
+  justify-content: center;
+  padding-top: 0;
+  pointer-events: none;
+  transition: transform 0.55s var(--ease-out);
+}
+
+.inner {
+  pointer-events: auto;
+  display: flex;
+  align-items: center;
+  gap: clamp(1rem, 3vw, 2.25rem);
+  width: 100%;
+  max-width: var(--maxw);
+  height: var(--nav-h);
+  padding-inline: var(--gutter);
+  color: var(--ink);
+  border-radius: 999px;
+  transition:
+    max-width 0.6s var(--ease-out),
+    height 0.6s var(--ease-out),
+    padding 0.6s var(--ease-out),
+    background-color 0.4s,
+    color 0.4s,
+    margin 0.6s var(--ease-out);
+}
+
+/* Compact pill once past the hero */
+.nav[data-scrolled="true"] .inner {
+  max-width: 34rem;
+  height: 3.25rem;
+  margin-top: 0.85rem;
+  padding-inline: 0.4rem 1.1rem;
+  background: rgba(17, 17, 16, 0.9);
+  color: #f3f1ec;
+  backdrop-filter: blur(14px) saturate(1.4);
+  -webkit-backdrop-filter: blur(14px) saturate(1.4);
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.08) inset,
+    0 10px 30px -12px rgba(0, 0, 0, 0.45);
+}
+
+.nav[data-hidden="true"] {
+  transform: translateY(calc(-100% - 1rem));
+}
+
+.mark {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 2.6rem;
+  height: 2.6rem;
+  border: 1.5px solid currentColor;
+  border-radius: 50%;
+  font-size: 0.82rem;
+  font-weight: 650;
+  letter-spacing: -0.02em;
+  transition: transform 0.5s var(--ease-out);
+}
+.mark:hover {
+  transform: rotate(-12deg) scale(1.05);
+}
+
+.links {
+  display: flex;
+  gap: clamp(0.9rem, 2.4vw, 1.75rem);
+  font-size: 0.92rem;
+}
+
+.resume {
+  margin-left: auto;
+  font-size: 0.92rem;
+}
+
+.links a,
+.resume {
+  position: relative;
+  padding-block: 0.25rem;
+}
+
+.links a::after,
+.resume::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.45s var(--ease-out);
+}
+.links a:hover::after,
+.resume:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+@media (max-width: 520px) {
+  .resume {
+    display: none;
+  }
+  .nav[data-scrolled="true"] .inner {
+    max-width: calc(100% - 1.5rem);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav,
+  .inner {
+    transition: none;
+  }
+}

@@ -1,0 +1,62 @@
+.name {
+  --name-ink: var(--ink);
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 0.22em;
+  font-size: clamp(3.1rem, 8.6vw, 9.25rem);
+  line-height: 0.95;
+  letter-spacing: -0.01em;
+  color: var(--name-ink);
+  font-kerning: none;
+}
+
+.word {
+  display: inline-flex;
+  align-items: baseline;
+  white-space: nowrap;
+}
+
+.slot {
+  display: inline-grid;
+  align-items: baseline;
+}
+
+.sizer,
+.glyph {
+  grid-area: 1 / 1;
+  white-space: pre;
+}
+
+.sizer {
+  visibility: hidden;
+}
+
+/* Zero-width, centered: the flipping glyph never changes the layout,
+   so the name can't reflow or wrap mid-animation. */
+.glyph {
+  justify-self: center;
+  display: flex;
+  justify-content: center;
+  width: 0;
+}
+
+/* Subtle CRT scanlines, drawn in the page color over the letters only.
+   Delete this block if you want clean letters. */
+.name::after {
+  content: "";
+  position: absolute;
+  inset: -0.05em -0.1em;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0 3px,
+    var(--paper) 3px 4px
+  );
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+.name[data-phase="done"]::after {
+  opacity: 0.35;
+}

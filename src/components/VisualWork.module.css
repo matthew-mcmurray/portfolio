@@ -1,0 +1,108 @@
+.section {
+  padding-bottom: clamp(6rem, 14vh, 10rem);
+}
+
+.bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: clamp(64px, 9svh, 88px);
+  font-size: 0.82rem;
+  border-bottom: 1px solid var(--panel-line);
+}
+.barLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.85rem;
+  font-weight: 500;
+}
+.barIndex {
+  font-family: var(--font-pixel);
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  color: var(--panel-muted);
+}
+
+.head {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 2rem 4rem;
+  align-items: end;
+  padding-top: clamp(4rem, 10vh, 7rem);
+  padding-bottom: clamp(2.5rem, 5vh, 3.5rem);
+}
+
+.title {
+  font-family: var(--font-serif);
+  font-size: clamp(3rem, 7vw, 7rem);
+  line-height: 0.92;
+  letter-spacing: -0.015em;
+}
+
+.headRight {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.summary {
+  max-width: 40ch;
+  color: var(--panel-muted);
+}
+
+.controls {
+  display: flex;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+.controls button {
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 50%;
+  border: 1px solid var(--panel-line);
+  transition:
+    background-color 0.3s,
+    color 0.3s,
+    transform 0.4s var(--ease-out);
+}
+.controls button:hover {
+  background: var(--panel-fg);
+  color: var(--panel-bg);
+}
+.controls button:active {
+  transform: scale(0.94);
+}
+
+.track {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-padding-inline: var(--gutter);
+  padding-inline: max(var(--gutter), calc((100vw - var(--maxw)) / 2 + var(--gutter)));
+  padding-bottom: 0.5rem;
+  scrollbar-width: none;
+  overscroll-behavior-x: contain;
+}
+.track::-webkit-scrollbar {
+  display: none;
+}
+
+.card {
+  flex: 0 0 clamp(220px, 24vw, 360px);
+  scroll-snap-align: start;
+  transition: transform 0.6s var(--ease-out);
+}
+.card:hover {
+  transform: translateY(-6px) rotate(-0.6deg);
+}
+
+@media (max-width: 800px) {
+  .head {
+    grid-template-columns: 1fr;
+  }
+  .card {
+    flex-basis: 72vw;
+  }
+}

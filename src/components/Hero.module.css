@@ -1,0 +1,118 @@
+/* The hero stops short of the viewport so the first panel peeks in
+   from below — a built-in cue that there's more to scroll. */
+.hero {
+  min-height: calc(100svh - clamp(56px, 9svh, 96px));
+  display: grid;
+  align-items: center;
+  padding-top: var(--nav-h);
+  padding-bottom: calc(var(--radius-panel) + 2rem);
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.eyebrow {
+  font-family: var(--font-pixel);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: clamp(1rem, 2.5vh, 1.75rem);
+  animation: fade-up 0.8s var(--ease-out) both;
+}
+
+.statement {
+  max-width: 34ch;
+  margin-top: clamp(1.25rem, 3.5vh, 2.25rem);
+  font-family: var(--font-serif);
+  font-size: clamp(1.35rem, 2.3vw, 2.05rem);
+  line-height: 1.22;
+  color: var(--muted);
+  animation: fade-up 0.9s var(--ease-out) 1.15s both;
+}
+
+.lead {
+  color: var(--ink);
+}
+
+.cta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem 1.25rem;
+  margin-top: clamp(1.5rem, 4vh, 2.5rem);
+  animation: fade-up 0.9s var(--ease-out) 1.3s both;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  height: 2.9rem;
+  padding-inline: 1.35rem;
+  border-radius: 999px;
+  background: var(--ink);
+  color: var(--paper);
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition:
+    transform 0.4s var(--ease-out),
+    background-color 0.3s;
+}
+.button:hover {
+  background: var(--accent);
+  transform: translateY(-2px);
+}
+.button:active {
+  transform: translateY(0) scale(0.98);
+}
+
+.arrow {
+  transition: transform 0.4s var(--ease-out);
+}
+.button:hover .arrow {
+  transform: translateX(3px);
+}
+
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.88rem;
+  color: var(--muted);
+}
+
+.dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: #22b35e;
+  box-shadow: 0 0 0 0 rgba(34, 179, 94, 0.5);
+  animation: pulse 2.4s ease-out infinite;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(34, 179, 94, 0.45);
+  }
+  70%,
+  100% {
+    box-shadow: 0 0 0 8px rgba(34, 179, 94, 0);
+  }
+}

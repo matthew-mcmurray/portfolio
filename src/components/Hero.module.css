@@ -26,15 +26,20 @@
 }
 
 .statement {
-  max-width: 34ch;
+  max-width: 40ch;
   margin-top: clamp(1.25rem, 3.5vh, 2.25rem);
   font-family: var(--font-serif);
+  font-stretch: var(--serif-stretch);
   font-size: clamp(1.35rem, 2.3vw, 2.05rem);
   line-height: 1.22;
   color: var(--muted);
   animation: fade-up 0.9s var(--ease-out) 1.15s both;
 }
 
+.lead,
+.rest {
+  display: block;
+}
 .lead {
   color: var(--ink);
 }

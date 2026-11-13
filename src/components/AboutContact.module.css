@@ -16,6 +16,7 @@
 
 .heading {
   font-family: var(--font-serif);
+  font-stretch: var(--serif-stretch);
   font-size: clamp(2.6rem, 4.6vw, 4.5rem);
   line-height: 1;
 }
@@ -78,6 +79,7 @@
 
 .contactHeading {
   font-family: var(--font-serif);
+  font-stretch: var(--serif-stretch);
   font-size: clamp(2.8rem, 7.5vw, 7.5rem);
   line-height: 0.95;
   letter-spacing: -0.015em;

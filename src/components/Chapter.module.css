@@ -111,6 +111,7 @@
 
 .title {
   font-family: var(--font-serif);
+  font-stretch: var(--serif-stretch);
   font-size: clamp(2.6rem, 4.6vw, 4.5rem);
   line-height: 0.98;
   letter-spacing: -0.01em;

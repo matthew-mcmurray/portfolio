@@ -9,7 +9,8 @@ export function Hero() {
         <p className={styles.eyebrow}>{site.role}</p>
         <NameScramble text={site.name} />
         <p className={styles.statement}>
-          <span className={styles.lead}>{site.statementLead}</span> {site.statementRest}
+          <span className={styles.lead}>{site.statementLead}</span>{" "}
+          <span className={styles.rest}>{site.statementRest}</span>
         </p>
         <div className={styles.cta}>
           <a href="#contact" className={styles.button}>

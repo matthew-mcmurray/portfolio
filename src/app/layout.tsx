@@ -3,8 +3,6 @@ import type { Metadata, Viewport } from "next";
 import "@fontsource-variable/inter";
 import "@fontsource-variable/anybody/standard.css"; // weight + width axes
 import "@fontsource-variable/bricolage-grotesque";
-import "@fontsource/instrument-serif/400.css";
-import "@fontsource/instrument-serif/400-italic.css";
 import "@fontsource/silkscreen/400.css";
 
 import "./globals.css";

@@ -1,3 +1,20 @@
+@font-face {
+  font-family: "Junicode";
+  src: url("/fonts/JunicodeVF-Roman-latin.woff2") format("woff2");
+  font-weight: 300 700;
+  font-stretch: 75% 125%;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Junicode";
+  src: url("/fonts/JunicodeVF-Italic-latin.woff2") format("woff2");
+  font-weight: 300 700;
+  font-stretch: 75% 125%;
+  font-style: italic;
+  font-display: swap;
+}
+
 /* ── Design tokens ─────────────────────────────────────────── */
 :root {
   --paper: #fbfaf7;
@@ -8,7 +25,8 @@
   --accent: #2559d3;
 
   --font-sans: "Inter Variable", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --font-serif: "Instrument Serif", Georgia, "Times New Roman", serif;
+  --font-serif: "Junicode", Georgia, serif;
+  --serif-stretch: 75%; /* 75% = most condensed, 100% = normal */
   --font-pixel: "Silkscreen", ui-monospace, monospace;
   --font-mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
 

@@ -295,7 +295,7 @@ export function can(action, { role, isOwner = false, lock = {} } = {}) {
       sections: [
         {
           heading: "Why I'm building it",
-          body: ["I've always wanted a place to keep track of my thoughts about music, new releases, andshare them with friends. Taking it a step further, I wanted to create a space that felt like a room you could customize and make your own, and one that is shaped based on your listening habits."],
+          body: ["I've always wanted a place to keep track of my thoughts about music, new releases, and share them with friends. Taking it a step further, I wanted to gamify this by creating a room that you personalize and reflects your listening habits"],
         },
         {
           heading: "Where it stands",

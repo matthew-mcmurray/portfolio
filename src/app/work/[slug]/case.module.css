@@ -44,6 +44,7 @@
 .title {
   margin-top: 1rem;
   font-family: var(--font-serif);
+  font-stretch: var(--serif-stretch);
   font-size: clamp(3.2rem, 9vw, 8.5rem);
   line-height: 0.92;
   letter-spacing: -0.02em;
@@ -119,6 +120,7 @@
 
 .sectionTitle {
   font-family: var(--font-serif);
+  font-stretch: var(--serif-stretch);
   font-size: clamp(2rem, 3.2vw, 3rem);
   line-height: 1.05;
 }
@@ -176,6 +178,7 @@
 }
 .nextTitle {
   font-family: var(--font-serif);
+  font-stretch: var(--serif-stretch);
   font-size: clamp(2.6rem, 7vw, 6.5rem);
   line-height: 1;
 }

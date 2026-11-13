@@ -114,7 +114,7 @@ export const chapters: Chapter[] = [
     },
     items: [
       {
-        src: "/media/CreditDecisioningFINAL.mp4",
+        src: "/media/CreditConsoleVideo.mp4",
         alt: "High-fidelity Figma prototype of the main dashboard",
         aspect: "18 / 12",
         header: "Prototype first",
@@ -141,7 +141,7 @@ export const chapters: Chapter[] = [
       intro:
         "How I take features from a Figma prototype to a shipped, production-ready interface, and keep a family of apps feeling like one product.",
       hero: [
-        { src: "/media/CreditDecisioningFINAL.mp4", alt: "CreditDecisioning Console overview", aspect: "31 / 20", label: "Prototype · Figma (remade without sensitive data)" },
+        { src: "/media/CreditConsoleVideo.mp4", alt: "Credit Console overview", aspect: "31 / 20", label: "Prototype · Figma (remade without sensitive data)" },
         { src: "/media/ShippedProduct.mp4", alt: "Shipped Product Video", aspect: "31 / 20", label: "Production · React (remade without sensitive data)" }
       ],
       sections: [
@@ -284,13 +284,13 @@ export function can(action, { role, isOwner = false, lock = {} } = {}) {
         alt: "Visual direction and type explorations",
         aspect: "4 / 3",
         header: "Visual direction",
-        body: "Settled on clean type with pixelated accent details, which will match the blocky design of the roo created in three.js",
+        body: "Settled on clean type with pixelated accent details, which will match the blocky design of the room created in three.js",
       },
     ],
     caseStudy: {
       category: "Personal project",
       intro:
-        "An app I'm designing and building from scratch. This page tracks the decisions as they happen.",
+        "An app I'm designing and building from scratch. .",
       hero: { src: "/media/AppDemoVid.mp4", alt: "App concept overview", aspect: "16 / 9" },
       sections: [
         {
@@ -327,8 +327,13 @@ export const visualWork = {
     { src: "/media/LUXposterFINALFINALcopy.png", alt: "LUX Poster", aspect: "4 / 5" },
     { src: "/media/FrankOceanMixedMediaCopy.png", alt: "Frank Ocean Mixed Media", aspect: "4 / 5" },
     { src: "/media/epistolaresakriilaposterCopy.PNG", alt: "Akriila Poster", aspect: "4 / 5" },
+    { src: "/media/frankWhiteFerrari.PNG", alt: "Frank Ocean White Ferrari Poster", aspect: "4 / 5" },
     { src: "/media/tiffanyDaysFINALVertical.png", alt: "Tiffany Day Vertical Poster", aspect: "4 / 5", position: "50% 10%" },
-    { src: "/media/GraveoftheFirefliesPosternobordercopy.png", alt: "Grave of the Fireflies Poster", aspect: "4 / 5" }
+    { src: "/media/GraveoftheFirefliesPosternobordercopy.png", alt: "Grave of the Fireflies Poster", aspect: "4 / 5" },
+    { src: "/media/YeatPosterFINAL.png", alt: "Yeat Poster", aspect: "4 / 5" },
+    { src: "/media/MACTinyDesk.png", alt: "Mac Miller Tiny Desk Poster", aspect: "4 / 5" },
+    { src: "/media/courtingPosterPRTFL.png", alt: "Courting iOS Poster", aspect: "4 / 5" },
+    { src: "/media/PharrellMagazineCover.PNG", alt: "Pharrell Magazine Cover", aspect: "4 / 5" },
   ] satisfies MediaItem[],
 };
 
